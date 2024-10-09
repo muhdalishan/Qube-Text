@@ -126,41 +126,42 @@ export default function TextForm(props) {
     
    
 
-    <div className="container my-4 mx-6">
-  <p>
-    <button 
-      className="btn btn-outline-secondary" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#collapseExample" 
-      aria-expanded="false" 
-      aria-controls="collapseExample"
-    >
-      Analyze text
-    </button>
-  </p>
-  
-  <div className="collapse" id="collapseExample">
-    <div 
-      className="card card-body" 
-      style={{ 
-        backgroundColor: props.darkM === 'light' ? 'white' : '#212529', 
-        color: props.darkM === 'dark' ? 'white' : 'black' 
-      }}
-    >
-      <h3 className="card-title">Text Summary</h3>
-      <hr />
-      <p>{text ? text.trim().split(/\s+/).filter(word => /^[A-Za-z]+$/.test(word)).length : 0} words </p>
-      <p>{text ? text.trim().split('').filter((element) => element.length !== 0).length : 0} characters</p>
-      <p>{text ? (0.005 * text.trim().split(/\s+/).filter(word => /^[A-Za-z]+$/.test(word)).length).toFixed(2) : 0} Minutes Average Read Time</p>
-      
-      <h3 className="card-title">Text Preview</h3>
-      <hr />
-      <p>{text.length>0?text:"Nothing to preview!"}</p>
-      
+  <div className="container my-4 mx-6">
+    <p>
+      <button 
+        className="btn btn-outline-secondary" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#collapseExample" 
+        aria-expanded="true" 
+        aria-controls="collapseExample"
+      >
+        Preview Text Summary ⮟
+      </button>
+    </p>
+    
+    <div className="collapse show" id="collapseExample"> 
+      <div 
+        className="card card-body" 
+        style={{ 
+          backgroundColor: props.darkM === 'light' ? 'white' : '#212529', 
+          color: props.darkM === 'dark' ? 'white' : 'black' 
+        }}
+      >
+        <h3 className="card-title">Text Summary</h3>
+        <hr />
+        <p>{text ? text.trim().split(/\s+/).filter(word => /^[A-Za-z]+$/.test(word)).length : 0} words </p>
+        <p>{text ? text.trim().split('').filter((element) => element.length !== 0).length : 0} characters</p>
+        <p>{text ? (0.005 * text.trim().split(/\s+/).filter(word => /^[A-Za-z]+$/.test(word)).length).toFixed(2) : 0} Minutes Average Read Time</p>
+        
+        <h3 className="card-title">Text Preview</h3>
+        <hr />
+        <p>{text.length > 0 ? text : "Nothing to preview!"}</p>
+        
+      </div>
     </div>
   </div>
-</div>
+
 
     </>
   )
