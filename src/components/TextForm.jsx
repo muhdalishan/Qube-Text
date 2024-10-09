@@ -136,7 +136,7 @@ export default function TextForm(props) {
         aria-expanded="true" 
         aria-controls="collapseExample"
       >
-        Preview Text Summary ⮟
+        Preview Text Summary
       </button>
     </p>
     
