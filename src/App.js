@@ -49,11 +49,7 @@ function App() {
     <Route path="/" element={
       <>
       <div className='Container my-3'>
-      <TextForm 
-          showAlert={showAlert} 
-          heading={<span className="text-warning font-weight-bold">Qube Text</span> + ' - Case Converter / Trimmer / Counter'} 
-          darkM={darkM} 
-      />
+        <TextForm showAlert={showAlert} heading="Qube Text - Case Converter / Space Trimmer / Word & Char Counter"darkM={darkM}/>
        </div>
       </>
     }>
