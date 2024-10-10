@@ -59,7 +59,7 @@ export default function TextForm(props) {
 
   //clear
   const handleClearClick=()=>{
-    let newText = " ";
+    let newText = "";
     setText(newText)
     props.showAlert("Text is Cleared","info")
 
